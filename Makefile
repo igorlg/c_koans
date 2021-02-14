@@ -18,7 +18,10 @@ CFLAGS := -std=$(STD) -Wall -Werror -Wno-unused-function -Wno-nonnull
 
 CRITERION := -lcriterion
 
-.PHONY: setup all clean
+.PHONY: setup all clean run
+
+run: clean all
+	@./bin/c_koans
 
 all: setup $(EXEC)
 
